@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Dynamic Content Change</title> 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+        } 
+        
+        header { 
+            background-color: #333; 
+            color: white; 
+            padding: 10px; 
+            text-align: center; 
+        } 
+        
+        nav { 
+            background-color: #f0f0f0; 
+            padding: 10px; 
+        } 
+        
+        nav ul { 
+            list-style-type: none; 
+            margin: 0; 
+            padding: 0; 
+            text-align: center; 
+        } 
+        
+        nav ul li { 
+            display: inline; 
+            margin-right: 10px; 
+        } 
+        
+        main { 
+            padding: 20px; 
+        } 
+        
+        .default-content { 
+            background-color: #f9f9f9; 
+            padding: 20px; 
+            border: 1px solid #ddd; 
+        } 
+        
+        .new-content { 
+            background-color: #007bff; 
+            color: white; 
+            padding: 20px; 
+            border: 1px solid #0056b3; 
+            } 
+    </style>
+</head> 
+
+<body> 
+    <header> 
+        <h1>Website Title</h1> 
+    </header> 
+    <nav> 
+        <ul> 
+            <li><a href="#">Home</a></li> 
+            <li><a href="#">About</a></li> 
+            <li><a href="#">Contact</a></li> 
+        </ul> 
+    </nav> 
+    <main> 
+        <section class="default-content" id="mainSection"> 
+            <h2>Main Section Content</h2> 
+            <p>This is the default content of the main section.</p> 
+        </section> 
+    </main> 
+    <button id="changeContentButton">Change Main Content</button> 
+    
+    <script> document.getElementById('changeContentButton').addEventListener('click', function() { 
+        var mainSection = document.getElementById('mainSection'); 
+        mainSection.innerHTML = ` <section class="new-content"> 
+        <h2>New Main Section Content</h2> 
+        <p>This is the new content of the main section with different style.</p> 
+        </section> `; 
+        }); 
+    </script> 
+</body> 
+</html>
