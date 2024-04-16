@@ -1,0 +1,21 @@
+.stopwatch-container { 
+    max-width: 300px; 
+    margin: auto; 
+    text-align: center; 
+}
+
+.timer { 
+    font-size: 2em; 
+    margin: 10px 0; 
+}
+
+.controls button { 
+    font-size: 1em; 
+    margin: 5px;
+    padding: 10px; 
+    cursor: pointer; 
+} 
+
+.controls button:disabled { 
+    cursor: not-allowed; 
+}
